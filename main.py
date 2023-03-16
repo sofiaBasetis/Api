@@ -59,10 +59,12 @@ def update_student(updated_student: Student, id:str):
             return "Estudiante modificado"
     return "No existe estudiante"
 
-@app.delate("/students/")
+@app.delete("/students/")
 def delete_student(id: str): 
     for student in students: 
         if student["id"] == id: 
             students.remove(student)
             return "Estudiante eliminado"
     return "No existe el estudiante"
+
+
